@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #e0e0e0; -fx-font-family: &quot;Roboto Mono Light&quot;;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="qrcode.FXMLDocumentController">
+    <children>
+      <AnchorPane id="paper" layoutX="25.0" layoutY="85.0" prefHeight="350.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;" stylesheets="@../css/buttons_style.css">
+         <children>
+            <Text id="text" layoutX="28.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="The text or the link you want to convert" textAlignment="CENTER" wrappingWidth="398.603515625">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="text_link" alignment="CENTER" layoutX="33.0" layoutY="51.0" onAction="#text_link" prefHeight="26.0" prefWidth="389.0" promptText="like: this is better or link like walidamriou.com" />
+            <Text id="text" layoutX="119.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="Choose a place to save" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXButton id="button" fx:id="chooser" buttonType="RAISED" contentDisplay="CENTER" layoutX="206.0" layoutY="227.0" onAction="#chooser" ripplerFill="WHITE" style="-fx-background-color: #007aff;" text="Chooser" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Text id="appname" layoutX="79.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="QRcode generator">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text id="appname" layoutX="79.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by Walid Amriou">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <JFXButton id="button" buttonType="RAISED" contentDisplay="CENTER" layoutX="184.0" layoutY="381.0" onAction="#generatenow" ripplerFill="WHITE" text="generate now" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Text id="text" fx:id="finish" layoutX="24.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="452.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text id="text" layoutX="231.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="size">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="size" alignment="CENTER" layoutX="199.0" layoutY="317.0" prefHeight="26.0" prefWidth="102.0" promptText="350" />
+      <ImageView fitHeight="62.0" fitWidth="51.0" layoutX="22.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../logo.png" />
+         </image>
+      </ImageView>
+    </children>
+   <stylesheets>
+      <URL value="@../css/buttons_style.css" />
+      <URL value="@../css/title.css" />
+   </stylesheets>
+</AnchorPane>
